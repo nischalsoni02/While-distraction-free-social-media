@@ -1,0 +1,18 @@
+.home {
+    margin-left: 230px;
+    margin-top: 5%;
+    display: flex;
+}
+
+.homeProfile {
+    margin-left: 5%;
+    margin-right: 0%;
+}
+
+@media (max-width: 768px) {
+    .home {
+      margin-left: 0px;
+      margin-top: 15%;
+    }
+  }
+

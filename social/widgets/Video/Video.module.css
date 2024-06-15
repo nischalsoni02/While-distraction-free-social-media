@@ -1,0 +1,306 @@
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  margin-top: 5%;
+  margin-left: 200px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.videoSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploaderProfile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.uploaderInfo {
+  display: flex;
+  align-items: center;
+}
+
+.uploaderAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.uploaderName {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.followButton {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.followButton:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.videoDetails {
+  text-align: left;
+  width: 95%;
+}
+
+.videoTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.videoDescription {
+  font-size: 1rem;
+  color: #666;
+}
+
+.commentSection {
+  width: 85%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.commentsHeading {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.commentForm {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.commentInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.commentButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.commentsList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.comment {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.comment span {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.relatedVideosSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+.relatedVideosHeading {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.relatedVideos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  width: 400px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.relatedVideos::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.relatedVideoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
+}
+
+.relatedVideoCard:hover {
+  transform: translateY(-5px);
+}
+
+.relatedVideoThumbnail {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.relatedVideoTitle {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .relatedVideos {
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoContainer {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .mainContent {
+    display: grid;
+    margin-top: 15%;
+  }
+
+  .videoPlayer {
+    width: 100%;
+    height: 250px;
+  }
+
+  .relatedVideosSection {
+    margin-top: 2%;
+  }
+
+  .relatedVideosHeading {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .relatedVideosSection {
+    padding: 1%;
+  }
+
+  .relatedVideoCard {
+    width: 250px;
+    height: 250px;
+  }
+
+  .relatedVideoThumbnail {
+    height: 100%;
+    width: 100px;
+    object-fit: cover;
+  }
+
+  .uploaderProfile {
+    margin-bottom: 5%;
+  }
+
+  .uploaderName {
+    font-size: 1rem;
+  }
+
+  .followButton {
+    padding: 4px 8px;
+    font-size: 0.3 rem;
+    font-weight: 300;
+  }
+
+  .uploaderAvatar {
+    height: 40px;
+    width: 40px;
+  }
+
+  .videoTitle {
+    font-size: 1rem;
+  }
+
+  .videoDescription {
+    font-size: 0.8rem;
+  }
+}

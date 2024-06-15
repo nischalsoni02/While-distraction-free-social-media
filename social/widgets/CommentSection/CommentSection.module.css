@@ -1,0 +1,134 @@
+.commentSection {
+    width: 95%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .commentsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .commentsHeading {
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .dropdownButton {
+    background: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .commentsPreviewList {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px; /* To account for scrollbar space */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .comment {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  
+  .comment p {
+    margin-left: 10px;
+    flex: 1;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+  }
+  
+  .commentUserImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .commentTimestamp {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  .commentForm {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .commentInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .commentButton {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+
+  @media (max-width: 600px) {
+    .commentsHeading {
+      font-size: 1rem;
+    }
+  
+    .commentsPreviewList {
+      max-height: 150px;
+      font-size: 0.9rem;
+    }
+  
+    .comment {
+      padding: 8px;
+      margin-bottom: 8px;
+    }
+  
+    .comment p {
+      margin-left: 8px;
+      font-size: 0.7rem;
+    }
+  
+    .commentUserImage {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .commentTimestamp {
+      font-size: 0.7rem;
+      margin-left: 8px;
+    }
+  
+    .commentInput {
+      padding: 8px;
+      margin-right: 8px;
+    }
+  
+    .commentButton {
+      padding: 8px 16px;
+    }
+  }

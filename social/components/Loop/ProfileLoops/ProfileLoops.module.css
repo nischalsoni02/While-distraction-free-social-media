@@ -1,0 +1,49 @@
+/* components/ProfileLoop.module.css */
+
+.loopContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .loopCard {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .loopCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  
+  .loopInfo {
+    padding: 10px;
+  }
+  
+  .loopInfo h3 {
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .loopInfo p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .loopStats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  

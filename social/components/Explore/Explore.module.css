@@ -1,0 +1,181 @@
+/* Explore.module.css */
+
+.exploreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 24px;
+  background-color: #f9f9f9; /* Light background for the page */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 7%;
+}
+
+.searchContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Blue glow on focus */
+  border-color: #007bff;
+}
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  border-bottom: 2px solid #d1d1d1;
+}
+
+.categoryButton {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  color: #666666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.categoryButton:hover {
+  color: #007bff;
+}
+
+.activeTab {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+
+.selectedTab {
+  font-size: 1 rem;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+  width: 100%;
+}
+
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.resultCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 700px;
+}
+
+.resultCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.bio {
+  font-size: 14px;
+  color: #666666;
+}
+
+.followButton, .unfollowButton {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.followButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.unfollowButton {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+@media (max-width: 768px) {
+   .resultCard {
+    width: 320px;
+   }
+
+   .exploreContainer {
+    margin-top: 20%;
+   }
+
+   .selectedTab {
+    font-size: 1rem;
+    font-weight: 400px;
+    margin-top: 0px;
+   }
+
+   .resultCard {
+    height: 45px;
+    width: 100%;
+   }
+
+   .profileImage {
+    height: 35px;
+    width: 35px;
+   }
+
+   .name {
+    font-size: 0.8rem;
+   }
+
+   .followButton ,.unfollowButton {
+    height: 30px;
+    padding: 0.5% 3%;
+
+    font-size: 0.8rem;
+   }
+}

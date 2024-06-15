@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /*Adds smooth scrolling instead of snapping to element*/
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  overflow-x: hidden;
+  font-weight: 500;
+  color: #777;
+  background-color: black;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #04a0f4, #11b7da, #23d5b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

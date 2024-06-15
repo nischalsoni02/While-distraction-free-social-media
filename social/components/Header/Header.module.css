@@ -1,0 +1,68 @@
+.navbar {
+  width: 90px;
+  height: 620px;
+  padding: var(--mantine-spacing-md);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+
+.navbarMain {
+  flex: 1;
+}
+
+.link {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--mantine-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+}
+
+.link:hover {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
+}
+
+.link[data-active] {
+  background-color: var(--mantine-color-blue-light);
+  color: var(--mantine-color-blue-light-color);
+}
+
+.link[data-active]:hover {
+  background-color: var(--mantine-color-blue-light);
+  color: var(--mantine-color-blue-light-color);
+}
+
+.logoImage {
+  height: 120px;
+  width: 220px;
+  margin-top: -30px;
+  margin-left: -20px;
+}
+
+.home {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeProfile {
+  height: 100px;
+  top: 10px;
+}
+
+@media (max-width: 768px) {
+  .homeProfile {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .logoImage {
+    margin-left: 10px;
+  }
+}

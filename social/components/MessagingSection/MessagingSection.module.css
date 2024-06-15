@@ -1,0 +1,168 @@
+.chatContainer {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 50px;
+  height: 600px; /* Fixed height for the chat container */
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.chatInner {
+  display: flex;
+  height: 100%; /* Ensure inner div takes full height */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.userList {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  overflow-y: auto; /* Enable scrolling */
+}
+
+.userList h4 {
+  font-size: 1.2em;
+  color: #4a90e2;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.userItem:hover {
+  background-color: #eaeaea;
+  transform: scale(1.02);
+}
+
+.userImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.userName {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.85em;
+  color: #333;
+}
+
+.onlineIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  margin-left: 5px;
+}
+
+.chatBox {
+  flex: 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+.selectUserPrompt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.1em;
+}
+
+.chatHeader {
+  text-align: center;
+  font-size: 1.2em;
+  color: #4a90e2;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .chatContainer {
+    margin: 0;
+    padding: 10px;
+    height: auto; /* Allow auto height on smaller screens */
+  }
+
+  .chatInner {
+    flex-direction: column;
+  }
+
+  .userList {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.message-list .rce-mbox-left-notch, .message-list .rce-mbox-right-notch {
+  display: none;
+}
+
+.message-list .rce-mbox {
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  max-width: 70%;
+}
+
+.message-list .rce-mbox-left {
+  background-color: #f1f0f0;
+}
+
+.message-list .rce-mbox-right {
+  background-color: #dcf8c6;
+}
+
+/* Animations and additional styles */
+.userItem {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.chatBox h6 {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

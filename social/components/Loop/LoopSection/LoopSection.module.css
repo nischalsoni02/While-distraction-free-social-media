@@ -1,0 +1,87 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* Allows vertical scrolling */
+    padding: 20px;
+    gap: 20px;
+    height: 100vh; 
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    margin-top: 5%
+  }
+  
+  .videoWrapper {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(177, 176, 176, 0.2);
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Adjust this to control the max size of the video */
+    background-color: #000; /* Placeholder background */
+    border-radius: 8px; /* Optional: Rounds the corners of the video player */
+    overflow: hidden; /* Keeps the content within the border radius */
+    margin-bottom: 20px; /* Add space between videos */
+    scroll-snap-align: start;
+    height: 100%;
+    min-height: 600px;
+  }
+  
+  .videoPlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8px 16px;
+    border-radius: 8px;
+    max-width: calc(100% - 20px);
+    box-sizing: border-box;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+  /* Information text styles */
+  .info h4,
+  .info p {
+    margin: 2px 0; /* Less margin for a compact look */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Adjustments for very small screens */
+  @media (max-width: 720px) {
+
+    .container{
+      margin-top: 0%;
+      padding: 0px;
+      height: 95vh;
+    }
+  
+    .videoWrapper {
+      max-width: 400px; /* Adjust max-width for very small devices */
+      min-height: 700px;
+    }
+  
+    .info {
+      font-size: 12px; /* Even smaller font for smaller devices */
+    }
+  }
+  
+  /* Optional: Adjustments for landscape orientation on small screens */
+  @media (max-height: 320px) {
+    .videoWrapper {
+      padding-bottom: 75%; /* Adjust aspect ratio for landscape orientation */
+    }
+  }
+  
+  

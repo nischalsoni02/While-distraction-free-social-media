@@ -1,0 +1,33 @@
+.authForm {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .authForm {
+        height: 500px;
+        width: 400px;
+        margin-top: 5vh;
+    }
+}
+
+/* For larger mobile devices */
+@media (max-width: 600px) {
+    .authForm {
+        height: 600px;
+        width: 90%; /* More flexible width for smaller screens */
+        margin-top: 5vh;
+    }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+    .authForm {
+        height: 600px;
+        width: 90%;
+        margin-top: 5vh;
+    }
+}

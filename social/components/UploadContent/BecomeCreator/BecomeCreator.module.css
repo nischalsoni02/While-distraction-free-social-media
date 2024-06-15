@@ -1,0 +1,153 @@
+/* Create.module.css */
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    margin: 0 auto;
+    max-width: 1100px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+    margin-left: 210px;
+  }
+  
+  .contentContainer {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageContainer img {
+    max-width: 90%;
+    height: 500px;
+    border-radius: 8px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .inputField:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  .button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:active {
+    background-color: #004085;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .para {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .mainContainer {
+      flex-direction: column;
+      gap: 30px;
+      padding: 15px;
+      max-width: 800px;
+    }
+  
+    .imageContainer img {
+      height: 400px;
+    }
+  
+    .heading {
+      font-size: 1.75rem;
+    }
+  
+    .button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainContainer {
+      max-width: 600px;
+      padding: 10px;
+      gap: 20px;
+    }
+  
+    .imageContainer img {
+      height: 300px;
+    }
+  
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContainer {
+      max-width: 100%;
+      padding: 8px;
+      gap: 15px;
+      margin-top: 10%;
+    }
+  
+    .imageContainer img {
+      height: 200px;
+      display: none;
+    }
+  
+    .heading {
+      font-size: 1.25rem;
+    }
+  
+    .button {
+      font-size: 10px;
+      padding: 6px;
+    }
+  }
+  
